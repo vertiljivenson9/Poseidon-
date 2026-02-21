@@ -1,0 +1,7 @@
+name = "poseidon-worker"
+main = "src/index.js"
+compatibility_date = "2025-02-21"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+ALLOWED_HOSTS = "supabase.co,neon.tech"   # Separados por comas
