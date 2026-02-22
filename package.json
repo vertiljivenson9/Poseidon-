@@ -1,0 +1,12 @@
+{
+  "name": "poseidon-render",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^0.10.4",
+    "express": "^4.22.1"
+  }
+}
