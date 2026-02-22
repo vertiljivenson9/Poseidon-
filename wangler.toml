@@ -1,8 +1,8 @@
-name = "poseidon-db-generator"          # Cámbialo por un nombre único
-compatibility_date = "2026-02-21"
-main = "index.js"
+# Opción B: el caso más frecuente → archivo en src/
+name = "poseidon-db-generator"
+compatibility_date = "2026-02-22"
+main = "src/index.js"               # ← aquí está el fix en el 80% de los casos
 compatibility_flags = ["nodejs_compat"]
 
-# Variables de entorno (puedes ponerlas como secrets después)
 [vars]
 ALLOWED_HOSTS = "supabase.co,neon.tech,postgres"
