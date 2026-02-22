@@ -1,16 +1,24 @@
 {
-  "name": "poseidon-worker",
+  "name": "poseidon-db-generator",
   "version": "1.0.0",
-  "type": "module",
+  "description": "Poseidon - Generador de bases de datos con Express y Neon",
+  "main": "src/index.js",                  // Apunta a tu entry-point (Render lo usa para referencia, pero el start command lo sobreescribe)
+  "type": "module",                        // IMPORTANTE si usas import/export (ES modules)
   "scripts": {
-    "dev": "wrangler dev",
-    "deploy": "wrangler deploy"
+    "start": "bun src/index.js",           // O "node src/index.js" si no usas Bun
+    "dev": "bun src/index.js"              // Opcional para local
+  },
+  "engines": {                             // Recomendado: especifica versión de Node (Render lo respeta mejor)
+    "node": ">=18.0.0",                    // O ">=20.0.0" si usas features modernas
+    "bun": ">=1.0.0"                       // Si usas Bun como runtime
   },
   "dependencies": {
-    "@neondatabase/serverless": "^0.10.4",
-    "express": "^4.22.1"
+    "express": "^4.22.1",
+    "@neondatabase/serverless": "^0.10.4"
+    // Agrega otras dependencias si tienes (cors, dotenv, etc.)
   },
   "devDependencies": {
-    "wrangler": "^4.67.0"
+    // Si necesitas algo para dev local (ej. nodemon)
+    // "nodemon": "^3.1.0"
   }
 }
